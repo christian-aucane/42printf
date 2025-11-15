@@ -1,6 +1,32 @@
-static void	put_arg(char flag, void *arg, int *chars_count)
+#include "ft_printf.h"
+
+t_handler_func	get_handler_func(char flag)
 {
-	// TODO: implementer une fonction par flag et mettre des conditions pour appeler la bonne
+	int							i;
+	static const t_flag_handler	handlers[10] = {{'c', handle_char}, {'s',
+			handle_string}, {'p', handle_ptr}, {'d', handle_int}, {'i',
+			handle_int}, {'u', handle_uint}, {'x', handle_hex}, {'X',
+			handle_heX}, {'%', handle_percent}, {'\0', NULL}};
+
+	i = 0;
+	while (handlers[i].flag)
+	{
+		if ((handlers[i].flag == flag))
+			return (handlers[i].func);
+		i++;
+	}
+	return (NULL);
+}
+
+int	handle_flag(char flag, va_list *arg_ptr, int *chars_count_ptr)
+{
+	t_handler_func	handler_func;
+
+	handler_func = get_handler_func(flag);
+	if (!handler_func)
+		return (0);
+	handler_func(arg_ptr, chars_count_ptr);
+	return (1);
 }
 
 int	ft_printf(const char *format, ...)
@@ -18,7 +44,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (is_flag)
 		{
-			put_arg(format[i], va_arg(arg_ptr, void *), &chars_count);
+			handle_flag(format[i], &arg_ptr, &chars_count);
 			is_flag = 0;
 		}
 		else if (format[i] == '%')
