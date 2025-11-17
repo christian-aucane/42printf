@@ -57,23 +57,41 @@ make re         # Rebuild everything
 | `%X`       | Print a number in uppercase hexadecimal  |
 | `%%`       | Print the `%` character                  |
 
-## 🧩 Project Structure
-### 📂 Core
-| File                           | Description                                 |
-| ------------------------------ | ------------------------------------------- |
-| [`ft_printf.c`](./ft_printf.c) | Main function, handles parsing and dispatch |
-| [`handlers.c`](./handlers.c)   | Global conversion handler                   |
-| `handlers_*.c`                 | Specific handlers for each conversion       |
 
-### 🔧 Utils
-| File                                                   | Description                |
-| ------------------------------------------------------ | -------------------------- |
-| [`ft_putchar.c`](./utils/ft_putchar.c)                 | Print a single character   |
-| [`ft_putstr.c`](./utils/ft_putstr.c)                   | Print a string             |
-| [`ft_putnbr.c`](./utils/ft_putnbr.c)                   | Print a signed number      |
-| [`ft_putnbr_unsigned.c`](./utils/ft_putnbr_unsigned.c) | Print an unsigned number   |
-| [`ft_putnbr_base.c`](./utils/ft_putnbr_base.c)         | Print a number in any base |
-| [`ft_putnbr_ptr.c`](./utils/ft_putnbr_ptr.c)           | Handle pointer conversion  |
+## 📌 File Overview
+
+### 🧠 Core
+| File | Description |
+|------|-------------|
+| `ft_printf.c` | Main function. Parses the format string, manages the variadic arguments, and dispatches to handlers. |
+
+### 🛠️ Handlers (`handlers/`)
+| File | Description |
+|------|-------------|
+| `handle_char.c` | Handles `%c` conversion. |
+| `handle_string.c` | Handles `%s` conversion. |
+| `handle_ptr.c` | Handles `%p` conversion (nil + 0x...). |
+| `handle_int.c` | Handles `%d` and `%i` signed integers. |
+| `handle_uint.c` | Handles `%u` unsigned integers. |
+| `handle_hex.c` | Handles lowercase hexadecimal `%x`. |
+| `handle_hex_upper.c` | Handles uppercase hexadecimal `%X`. |
+| `handle_percent.c` | Handles literal `%%`. |
+
+### 📚 Headers (`includes/`)
+| File | Description |
+|------|-------------|
+| `ft_printf.h` | Public header containing the ft_printf prototype. |
+| `handlers.h` | Declarations for all handler functions. |
+| `utils.h` | Declarations for utility printing functions. |
+
+### 🔧 Utilities (`utils/`)
+| File | Description |
+|------|-------------|
+| `ft_putchar.c` | Low-level character output using `write()`. |
+| `ft_putstr.c` | Prints null-terminated strings. |
+| `ft_putnbr.c` | Prints signed integers. |
+| `ft_putnbr_base.c` | Converts numbers into any base (used for hex). |
+| `ft_putnbr_ptr.c` | Specific base printing for pointers (uintptr). |
 
 ## 🧪 Recommended Testers
 - 🔍 Printf Tester (Tripouille)
