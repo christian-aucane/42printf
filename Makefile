@@ -7,7 +7,7 @@ SRC = 	./ft_printf.c\
 		./utils/ft_putstr.c\
 		./utils/ft_putnbr_ptr.c\
 		./handlers/handle_char.c\
-		./handlers/handle_heX.c\
+		./handlers/handle_hex_upper.c\
 		./handlers/handle_hex.c\
 		./handlers/handle_uint.c\
 		./handlers/handle_int.c\
