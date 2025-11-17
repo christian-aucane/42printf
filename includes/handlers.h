@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handlers.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/17 17:10:33 by caucane           #+#    #+#             */
+/*   Updated: 2025/11/17 17:14:39 by caucane          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HANDLERS_H
 # define HANDLERS_H
 
@@ -13,7 +25,7 @@ void				handle_ptr(va_list *arg_ptr, int *chars_count);
 void				handle_int(va_list *arg_ptr, int *chars_count);
 void				handle_uint(va_list *arg_ptr, int *chars_count);
 void				handle_hex(va_list *arg_ptr, int *chars_count);
-void				handle_heX(va_list *arg_ptr, int *chars_count);
+void				handle_hex_upper(va_list *arg_ptr, int *chars_count);
 void				handle_percent(va_list *arg_ptr, int *chars_count);
 
 typedef struct s_flag_handler
