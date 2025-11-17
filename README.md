@@ -107,6 +107,10 @@ https://github.com/Tripouille/printfTester
     - 0x... followed by lowercase hexadecimal for valid pointers
 
 🏫 Author: caucane
+
 🖋️ Language: C
+
 🧾 Norm: 42 Norminette compliant
+
 🧰 Project: ft_printf — 42 Core Curriculum
+
