@@ -44,6 +44,13 @@ make clean      # Remove object files (*.o)
 make fclean     # Remove object files and libftprintf.a
 make re         # Rebuild everything
 ```
+
+## 📚 Ressources
+- 🔍 Printf Tester (Tripouille)
+https://github.com/Tripouille/printfTester
+- man printf
+https://linux.die.net/man/3/printf
+
 ## 🎯 Supported Conversions
 | Conversion | Description                              |
 | ---------- | ---------------------------------------- |
@@ -92,12 +99,6 @@ make re         # Rebuild everything
 | `ft_putnbr.c` | Prints signed integers. |
 | `ft_putnbr_base.c` | Converts numbers into any base (used for hex). |
 | `ft_putnbr_ptr.c` | Specific base printing for pointers (uintptr). |
-
-## 🧪 Ressources
-- 🔍 Printf Tester (Tripouille)
-https://github.com/Tripouille/printfTester
-- man printf
-https://linux.die.net/man/3/printf
 
 ## 📝 Notes & Requirements
 
