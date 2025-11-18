@@ -93,9 +93,11 @@ make re         # Rebuild everything
 | `ft_putnbr_base.c` | Converts numbers into any base (used for hex). |
 | `ft_putnbr_ptr.c` | Specific base printing for pointers (uintptr). |
 
-## 🧪 Recommended Testers
+## 🧪 Ressources
 - 🔍 Printf Tester (Tripouille)
 https://github.com/Tripouille/printfTester
+- man printf
+https://linux.die.net/man/3/printf
 
 ## 📝 Notes & Requirements
 
