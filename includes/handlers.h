@@ -6,7 +6,7 @@
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 17:10:33 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/17 17:14:39 by caucane          ###   ########.fr       */
+/*   Updated: 2025/11/21 10:41:37 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "utils.h"
 # include <stdarg.h>
-# include <stdint.h>
 
 typedef void		(*t_handler_func)(va_list *args, int *count);
 

@@ -6,7 +6,7 @@
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:47:08 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/18 11:47:34 by christian        ###   ########.fr       */
+/*   Updated: 2025/11/21 10:44:32 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_handler_func	get_handler_func(char flag)
 {
-	int							i;
-	static const t_flag_handler	handlers[10] = {{'c', handle_char}, {'s',
+	int						i;
+	const t_flag_handler	handlers[10] = {{'c', handle_char}, {'s',
 		handle_string}, {'p', handle_ptr}, {'d', handle_int}, {'i',
 		handle_int}, {'u', handle_uint}, {'x', handle_hex}, {'X',
 		handle_hex_upper}, {'%', handle_percent}, {'\0', NULL}};

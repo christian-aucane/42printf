@@ -98,7 +98,7 @@ https://linux.die.net/man/3/printf
 | `ft_putstr.c` | Prints null-terminated strings. |
 | `ft_putnbr.c` | Prints signed integers. |
 | `ft_putnbr_base.c` | Converts numbers into any base (used for hex). |
-| `ft_putnbr_ptr.c` | Specific base printing for pointers (uintptr). |
+| `ft_putnbr_ptr.c` | Specific base printing for pointers (unsigned long). |
 
 ## 📝 Notes & Requirements
 
