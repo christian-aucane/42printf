@@ -6,7 +6,7 @@
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:46:55 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/17 16:46:55 by caucane          ###   ########.fr       */
+/*   Updated: 2025/11/24 12:13:39 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	handle_ptr(va_list *args, int *chars_count)
 	ptr_val = va_arg(*args, void *);
 	if (!ptr_val)
 	{
-		ft_putstr("(nil)", chars_count);
+		ft_putstr_count("(nil)", chars_count);
 		return ;
 	}
-	ft_putstr("0x", chars_count);
-	ft_putnbr_ptr((unsigned long)ptr_val, chars_count);
+	ft_putstr_count("0x", chars_count);
+	ft_putnbr_ptr_count((unsigned long)ptr_val, chars_count);
 }

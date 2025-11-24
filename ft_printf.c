@@ -6,7 +6,7 @@
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:47:08 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/21 10:44:32 by caucane          ###   ########.fr       */
+/*   Updated: 2025/11/24 12:02:35 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ t_handler_func	get_handler_func(char flag)
 {
 	int						i;
 	const t_flag_handler	handlers[10] = {{'c', handle_char}, {'s',
-		handle_string}, {'p', handle_ptr}, {'d', handle_int}, {'i',
-		handle_int}, {'u', handle_uint}, {'x', handle_hex}, {'X',
-		handle_hex_upper}, {'%', handle_percent}, {'\0', NULL}};
+			handle_string}, {'p', handle_ptr}, {'d', handle_int}, {'i',
+			handle_int}, {'u', handle_uint}, {'x', handle_hex}, {'X',
+			handle_hex_upper}, {'%', handle_percent}, {'\0', NULL}};
 
 	i = 0;
 	while (handlers[i].flag)
@@ -62,7 +62,7 @@ int	ft_printf(const char *format, ...)
 		else if (format[i] == '%')
 			is_flag = 1;
 		else
-			ft_putchar(format[i], &chars_count);
+			ft_putchar_count(format[i], &chars_count);
 		i++;
 	}
 	va_end(arg_ptr);

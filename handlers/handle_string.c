@@ -6,7 +6,7 @@
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:46:42 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/17 16:46:42 by caucane          ###   ########.fr       */
+/*   Updated: 2025/11/24 12:12:24 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	handle_string(va_list *arg_ptr, int *chars_count)
 	str = va_arg(*arg_ptr, char *);
 	if (!str)
 		str = "(null)";
-	ft_putstr(str, chars_count);
+	ft_putstr_count(str, chars_count);
 }

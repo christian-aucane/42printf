@@ -1,11 +1,11 @@
 NAME = libftprintf.a
 
 SRC = 	./ft_printf.c\
-		./utils/ft_putchar.c\
-		./utils/ft_putnbr_base.c\
-		./utils/ft_putnbr.c\
-		./utils/ft_putstr.c\
-		./utils/ft_putnbr_ptr.c\
+		./utils/ft_putchar_count.c\
+		./utils/ft_putnbr_base_count.c\
+		./utils/ft_putnbr_count.c\
+		./utils/ft_putstr_count.c\
+		./utils/ft_putnbr_ptr_count.c\
 		./handlers/handle_char.c\
 		./handlers/handle_hex_upper.c\
 		./handlers/handle_hex.c\

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_count.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:46:31 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/17 16:46:31 by caucane          ###   ########.fr       */
+/*   Updated: 2025/11/24 12:13:16 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 
-void	ft_putstr(char *str, int *chars_count)
+void	ft_putstr_count(char *str, int *chars_count)
 {
 	while (*str)
 	{
-		ft_putchar(*str, chars_count);
+		ft_putchar_count(*str, chars_count);
 		str++;
 	}
 }
