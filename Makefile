@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Makefile                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 13:26:00 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/26 13:26:00 by caucane          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 NAME = libftprintf.a
 
 SRC = 	./ft_printf.c\
@@ -29,9 +17,7 @@ SRC = 	./ft_printf.c\
 
 OBJ		= $(SRC:.c=.o)
 
-INCLUDES	= includes
-
-CCFLAGS		= cc -Wall -Wextra -Werror -I $(INCLUDES)
+CCFLAGS		= cc -Wall -Wextra -Werror
 
 all: $(NAME)
 
