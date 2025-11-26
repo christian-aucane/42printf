@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 17:10:36 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/24 12:12:38 by caucane          ###   ########.fr       */
+/*   Created: 2025/11/17 17:10:24 by caucane           #+#    #+#             */
+/*   Updated: 2025/11/26 13:28:08 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# include <unistd.h>
+# include "handlers/handlers.h"
+# include <stdarg.h>
 
-void	ft_putchar_count(char c, int *chars_count);
-void	ft_putstr_count(char *str, int *chars_count);
-void	ft_putnbr_count(int nb, int *chars_count);
-void	ft_putnbr_base_count(unsigned int nb, char *base, int *chars_count);
-void	ft_putnbr_ptr_count(unsigned long nb, int *chars_count);
+int	ft_printf(const char *format, ...);
 
 #endif
