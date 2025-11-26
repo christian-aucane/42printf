@@ -6,7 +6,7 @@
 /*   By: caucane <christian.aucane@learner.42.tech  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:47:08 by caucane           #+#    #+#             */
-/*   Updated: 2025/11/24 12:02:35 by caucane          ###   ########.fr       */
+/*   Updated: 2025/11/26 13:28:08 by caucane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ t_handler_func	get_handler_func(char flag)
 {
 	int						i;
 	const t_flag_handler	handlers[10] = {{'c', handle_char}, {'s',
-			handle_string}, {'p', handle_ptr}, {'d', handle_int}, {'i',
-			handle_int}, {'u', handle_uint}, {'x', handle_hex}, {'X',
-			handle_hex_upper}, {'%', handle_percent}, {'\0', NULL}};
+		handle_string}, {'p', handle_ptr}, {'d', handle_int}, {'i',
+		handle_int}, {'u', handle_uint}, {'x', handle_hex}, {'X',
+		handle_hex_upper}, {'%', handle_percent}, {'\0', NULL}};
 
 	i = 0;
 	while (handlers[i].flag)
@@ -44,26 +44,24 @@ int	handle_flag(char flag, va_list *arg_ptr, int *chars_count_ptr)
 int	ft_printf(const char *format, ...)
 {
 	va_list	arg_ptr;
-	int		i;
 	int		is_flag;
 	int		chars_count;
 
 	chars_count = 0;
-	i = 0;
 	is_flag = 0;
 	va_start(arg_ptr, format);
-	while (format[i])
+	while (*format)
 	{
 		if (is_flag)
 		{
-			handle_flag(format[i], &arg_ptr, &chars_count);
+			handle_flag(*format, &arg_ptr, &chars_count);
 			is_flag = 0;
 		}
-		else if (format[i] == '%')
+		else if (*format == '%')
 			is_flag = 1;
 		else
-			ft_putchar_count(format[i], &chars_count);
-		i++;
+			ft_putchar_count(*format, &chars_count);
+		format++;
 	}
 	va_end(arg_ptr);
 	return (chars_count);
